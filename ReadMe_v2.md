@@ -28,9 +28,10 @@ Each prompt is audited on a scale of **0–10** using the following criteria:
 ### Prerequisites
 * **Python**: 3.9+
 * **LLM Server**: [Ollama](https://ollama.com/) installed and running.
-* **Model**: `gemma2:2b` (or higher).
+* **Model**: `gemma2:2b` (or higher).  I used qwen3:30b
 
 ### Installation & Execution
 1. **Prepare Environment**:
    ```bash
+
    pip install langchain langchain-ollama
