@@ -101,7 +101,13 @@ app = workflow.compile()
 
 # 5. Execution and Testing
 if __name__ == "__main__":
-    test_email = "I was charged twice for my subscription! This is urgent."
+    #test_email = "I was charged twice for my subscription! This is urgent."
+    #test_email = "Hi, I've been trying to log in all morning but I can't remember my password. Is there a way to reset it without contacting support? Thanks, John."
+    #test_email = "URGENT: I just checked my bank statement and I was charged $199 twice for the same annual subscription! I need an immediate refund and an explanation. This is unacceptable."
+    #test_email = "Hello Team, I noticed that whenever I try to export my monthly report as a PDF, the application just spins and then crashes. I've tried it on both Chrome and Safari. Let me know if you need logs."
+    #test_email = "I really love using the mobile app, but it's very bright at night. Are there any plans to add a Dark Mode or a night-time theme soon? It would be a lifesaver for my eyes!"
+    test_email = "Our production environment is failing intermittently. We are seeing constant 504 Gateway Timeout errors during our API sync. We've checked our local firewall and everything seems fine on our end. Please look into this immediately."
+
 
     print(f"------Processing Email: {test_email}-----")
     final_state = app.invoke({"email_content": test_email})
@@ -110,7 +116,6 @@ if __name__ == "__main__":
     print(f"[2] Topic: {final_state['topic']}")
     print(f"[3] Decision: {final_state['action']}")
     print(f"\n[4] Draft Response:\n {final_state['draft_response']}")
-
 
 
 
